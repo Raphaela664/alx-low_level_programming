@@ -1,2 +1,35 @@
-VimCrypt~03!"E¸•)Ÿº‚˜ÄÍ?–ç>|;ıE4VYs91?ˆ(Ó„‹µïD †Œ¦â«’6)€=‘™>g›,»N}œ“-I»433±×Ñ¦ØQ‰ÂXüyZ›h
-Ÿ‚—æWµ²rË©¢Rbf¾iÄcì…†]l†}v¢ÀÈèá¿¨€"“áj8GwoüÍÀà¦Âãî0å4S§–+ ¦õÖæ{ÇzBü×Äø:•ùAˆÑåîg«<Jid<@æÚØJœ`(“YÒ:‡Ø1 5€ÖÛ€³2àÊ	Œ”İ´Q©
+#include<stdio.h>
+
+
+/**
+ * main - Entry point
+ *
+ * Description: print all single digit numbers
+ *
+ * Return: Always 0 (Success)
+*/
+
+
+int main(void)
+
+{
+
+	int dig = 0;
+
+
+	while (dig <= 9)
+
+	{
+
+		printf("%i", dig);
+
+		++dig;
+
+	}
+
+	printf("\n");
+
+
+	return (0);
+
+}
