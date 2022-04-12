@@ -12,7 +12,7 @@ int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 /**
-*check_number - checks if string has one number
+*check_number -checks if string has one number
 *
 *@str: string
 *
@@ -21,15 +21,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 int check_number(char *str)
 {
-	while (*str != '\0')
+	while (*str!= '\0')
 	{
-		if (*str < '0' || *str > '9')
-			return (1);
-		str++;
+		if(*str < '0' || *str > '9')
+		return (1);
+	str++;
 	}
 	return (0);
 }
 
+/*functions for 101-mul.c */
 
 /**
 *error_exit -print error with putchar
@@ -42,9 +43,8 @@ int error_exit(void)
 {
 	char *pt;
 	int i;
-
-	pt = "Error";
-	for (i = 0; pt[i] != '\0'; i++)
+	pt = "error";
+	for(i=0;pt[i] != '\0'; i++)
 		_putchar(pt[i]);
 	_putchar('\n');
 	exit(98);
@@ -53,15 +53,12 @@ int error_exit(void)
 /**
 *_length -get length of the string
 *
-*@str: string to get length
-*
-*return: length of string
+*return length of string
 */
 
 int _length(char *str)
 {
 	int i = 0;
-
 	while (str[i] != '\0')
 		i++;
 	return (i);
