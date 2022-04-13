@@ -1,29 +1,74 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - should contain the function that selects the correct
- * function to perform the operation asked by the use
- * @s: struct s (int, int)
- * Return: NULL
+ * op_add - return the suma of a and b
+ * @a: int type Integer
+ * @b: int type Intger
+ * Return: add
  */
 
-int (*get_op_func(char *s))(int, int)
-{
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
-	int i = 0;
 
-	while (i < 5)
+int op_add(int a, int b)
+{
+	return (a + b);
+}
+
+/**
+ * op_sub - return the difference of a and b
+ * @a: int type Integer
+ * @b: int type Intger
+ * Return: sub
+ */
+
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - return the product of a and b
+ * @a: int type Integer
+ * @b: int type Intger
+ * Return: mul
+ */
+
+int op_mul(int a, int b)
+{
+	int mul = a * b;
+
+	return (mul);
+}
+
+/**
+ * op_div - return the division of a and b
+ * @a: int type Integer
+ * @b: int type Intger
+ * Return: div
+ */
+
+int op_div(int a, int b)
+{
+	if (b == 0)
 	{
-		if (ops[i].op[0] == s[0])
-			return (ops[i].f);
-		i++;
+		printf("Error\n");
+		exit(100);
 	}
-	return (NULL);
+	return (a / b);
+}
+
+/**
+ * op_mod - return the remainder of the division of a and b
+ * @a: int type Integer
+ * @b: int type Intger
+ * Return: mod
+ */
+
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
